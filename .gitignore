@@ -8,3 +8,4 @@ media/
 .env
 *.log
 .DS_Store
+.env
