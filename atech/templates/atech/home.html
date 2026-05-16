@@ -1,0 +1,544 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATech – Desarrollo de Software</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="{% static 'atech/css/style.css' %}">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+      <img src="{% static 'atech/images/logo.png' %}" alt="ATech Logo" height="42" class="logo-img">
+      <span class="brand-text">ATech</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-label="Menú">
+      <span class="toggler-icon">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vision">Visión</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mision">Misión</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="nav-link btn-nav-cta" href="#contacto">Contáctanos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero-section" id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="container position-relative z-1">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="hero-badge mb-4">
+          <i class="bi bi-cpu me-2"></i> Soluciones digitales de vanguardia
+        </div>
+        <h1 class="hero-title">
+          Transformamos tus ideas en
+          <span class="gradient-text">software de alto impacto</span>
+        </h1>
+        <p class="hero-subtitle mt-4">
+          Desarrollamos soluciones tecnológicas personalizadas que impulsan el crecimiento
+          de tu negocio. Calidad, innovación y resultados medibles en cada línea de código.
+        </p>
+        <div class="hero-ctas mt-5 d-flex flex-wrap gap-3">
+          <a href="#servicios" class="btn btn-primary-atech">
+            Nuestros servicios <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+          <a href="#contacto" class="btn btn-outline-atech">
+            Hablar con un experto
+          </a>
+        </div>
+        <div class="hero-stats mt-5 d-flex flex-wrap gap-4">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Proyectos<br>entregados</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Clientes<br>satisfechos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Años de<br>experiencia</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+        <div class="hero-visual">
+          <img src="{% static 'atech/images/logo.png' %}" alt="ATech" class="hero-logo-float">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+          <div class="floating-node node-1"><i class="bi bi-braces"></i></div>
+          <div class="floating-node node-2"><i class="bi bi-phone"></i></div>
+          <div class="floating-node node-3"><i class="bi bi-cloud-check"></i></div>
+          <div class="floating-node node-4"><i class="bi bi-shield-check"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICIOS
+═══════════════════════════════════════════ -->
+<section class="section-services py-6" id="servicios">
+  <div class="container">
+    <div class="section-header text-center mb-6" data-aos="fade-up">
+      <span class="section-tag">Lo que hacemos</span>
+      <h2 class="section-title mt-2">Nuestros <span class="gradient-text">Servicios</span></h2>
+      <p class="section-subtitle">
+        Construimos la tecnología que tu empresa necesita para crecer en un mundo digital.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Servicio 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="bi bi-globe2"></i>
+          </div>
+          <h3 class="service-title">Desarrollo Web</h3>
+          <p class="service-desc">
+            Sitios web y aplicaciones web modernas, rápidas y responsivas. Desde landing pages
+            hasta plataformas SaaS complejas con arquitectura escalable.
+          </p>
+          <ul class="service-features">
+            <li><i class="bi bi-check2-circle"></i> Frontend React / Vue</li>
+            <li><i class="bi bi-check2-circle"></i> Backend Django / Node.js</li>
+            <li><i class="bi bi-check2-circle"></i> SEO optimizado</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card service-card--featured">
+          <div class="featured-badge">Popular</div>
+          <div class="service-icon-wrap">
+            <i class="bi bi-phone"></i>
+          </div>
+          <h3 class="service-title">Apps Móviles</h3>
+          <p class="service-desc">
+            Aplicaciones nativas y multiplataforma para iOS y Android que conectan tu marca
+            directamente con tus usuarios en cualquier dispositivo.
+          </p>
+          <ul class="service-features">
+            <li><i class="bi bi-check2-circle"></i> React Native / Flutter</li>
+            <li><i class="bi bi-check2-circle"></i> UX/UI enfocado al usuario</li>
+            <li><i class="bi bi-check2-circle"></i> Integración APIs REST</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="bi bi-gear-wide-connected"></i>
+          </div>
+          <h3 class="service-title">Software a Medida</h3>
+          <p class="service-desc">
+            Sistemas empresariales personalizados: ERPs, CRMs, automatizaciones y herramientas
+            internas diseñadas exactamente para tus procesos de negocio.
+          </p>
+          <ul class="service-features">
+            <li><i class="bi bi-check2-circle"></i> Análisis de requerimientos</li>
+            <li><i class="bi bi-check2-circle"></i> Arquitectura robusta</li>
+            <li><i class="bi bi-check2-circle"></i> Soporte post-lanzamiento</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card">
+          <div class="service-icon-wrap">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h3 class="service-title">Consultoría IT</h3>
+          <p class="service-desc">
+            Asesoramiento estratégico en tecnología: arquitectura de sistemas, migración a la
+            nube, optimización de procesos y transformación digital integral.
+          </p>
+          <ul class="service-features">
+            <li><i class="bi bi-check2-circle"></i> Auditoría tecnológica</li>
+            <li><i class="bi bi-check2-circle"></i> Cloud (AWS / GCP / Azure)</li>
+            <li><i class="bi bi-check2-circle"></i> Roadmap digital</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     VISIÓN
+═══════════════════════════════════════════ -->
+<section class="section-vision py-6" id="vision">
+  <div class="container">
+    <div class="vision-card" data-aos="fade-up">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="vision-icon-block">
+            <div class="big-icon-ring">
+              <i class="bi bi-eye"></i>
+            </div>
+            <div class="vision-decoration">
+              <div class="deco-dot d-1"></div>
+              <div class="deco-dot d-2"></div>
+              <div class="deco-dot d-3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <span class="section-tag">Hacia dónde vamos</span>
+          <h2 class="section-title mt-2">Nuestra <span class="gradient-text">Visión</span></h2>
+          <p class="vision-text mt-4">
+            Ser la empresa de desarrollo de software de referencia en Latinoamérica, reconocida
+            por transformar la manera en que las organizaciones adoptan y aprovechan la tecnología
+            para generar valor real y sostenible.
+          </p>
+          <p class="vision-text">
+            Aspiramos a construir un ecosistema digital donde cada empresa, sin importar su tamaño,
+            tenga acceso a soluciones tecnológicas de clase mundial que potencien su competitividad
+            y proyecten su crecimiento hacia el futuro.
+          </p>
+          <div class="vision-pillars mt-4 d-flex flex-wrap gap-3">
+            <div class="pillar-chip"><i class="bi bi-stars me-2"></i>Excelencia</div>
+            <div class="pillar-chip"><i class="bi bi-diagram-3 me-2"></i>Escalabilidad</div>
+            <div class="pillar-chip"><i class="bi bi-globe-americas me-2"></i>Impacto global</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MISIÓN
+═══════════════════════════════════════════ -->
+<section class="section-mision py-6" id="mision">
+  <div class="container">
+    <div class="mision-card" data-aos="fade-up">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-lg-1 order-2">
+          <span class="section-tag">Por qué existimos</span>
+          <h2 class="section-title mt-2">Nuestra <span class="gradient-text">Misión</span></h2>
+          <p class="vision-text mt-4">
+            Desarrollar soluciones de software innovadoras, robustas y personalizadas que resuelvan
+            los desafíos tecnológicos reales de nuestros clientes, entregando productos de alta
+            calidad con los más altos estándares de ingeniería y diseño.
+          </p>
+          <p class="vision-text">
+            Nos comprometemos a establecer relaciones a largo plazo con cada cliente, actuando como
+            socios estratégicos que entienden su negocio, anticipan sus necesidades y les acompañan
+            en cada etapa de su transformación digital con honestidad y transparencia.
+          </p>
+          <div class="vision-pillars mt-4 d-flex flex-wrap gap-3">
+            <div class="pillar-chip"><i class="bi bi-people me-2"></i>Trabajo en equipo</div>
+            <div class="pillar-chip"><i class="bi bi-patch-check me-2"></i>Calidad</div>
+            <div class="pillar-chip"><i class="bi bi-heart me-2"></i>Compromiso</div>
+          </div>
+        </div>
+        <div class="col-lg-5 order-lg-2 order-1">
+          <div class="vision-icon-block mision-icon-block">
+            <div class="big-icon-ring big-icon-ring--alt">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <div class="vision-decoration">
+              <div class="deco-dot d-1"></div>
+              <div class="deco-dot d-2"></div>
+              <div class="deco-dot d-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TECNOLOGÍAS (Trust strip)
+═══════════════════════════════════════════ -->
+<section class="section-tech py-5">
+  <div class="container">
+    <p class="tech-label text-center mb-4">Tecnologías que dominamos</p>
+    <div class="tech-strip d-flex flex-wrap justify-content-center align-items-center gap-4">
+      <div class="tech-chip"><i class="bi bi-filetype-py me-2"></i>Python</div>
+      <div class="tech-chip"><i class="fab fa-django me-2"></i>Django</div>
+      <div class="tech-chip"><i class="fab fa-react me-2"></i>React</div>
+      <div class="tech-chip"><i class="fab fa-node-js me-2"></i>Node.js</div>
+      <div class="tech-chip"><i class="fab fa-flutter me-2" style="font-family: 'Bootstrap Icons'; font-style:normal;">&#xF52C;</i><i class="bi bi-phone me-2"></i>Flutter</div>
+      <div class="tech-chip"><i class="fab fa-aws me-2"></i>AWS</div>
+      <div class="tech-chip"><i class="fab fa-docker me-2"></i>Docker</div>
+      <div class="tech-chip"><i class="bi bi-database me-2"></i>PostgreSQL</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACTO
+═══════════════════════════════════════════ -->
+<section class="section-contact py-6" id="contacto">
+  <div class="container">
+    <div class="section-header text-center mb-6" data-aos="fade-up">
+      <span class="section-tag">Hablemos</span>
+      <h2 class="section-title mt-2">¿Listo para empezar tu <span class="gradient-text">proyecto</span>?</h2>
+      <p class="section-subtitle">
+        Cuéntanos tu idea. Nuestro equipo te responde en menos de 24 horas.
+      </p>
+    </div>
+
+    <div class="row g-5 justify-content-center">
+      <!-- Info lateral -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="contact-info-panel">
+          <h3 class="contact-info-title">Información de contacto</h3>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <span class="contact-info-label">Email</span>
+              <a href="mailto:atechtrujillo@gmail.com" class="contact-info-value">
+                atechtrujillo@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon contact-info-icon--wa">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div>
+              <span class="contact-info-label">WhatsApp</span>
+              <a href="{{ whatsapp_link }}" target="_blank" class="contact-info-value">
+                Escríbenos ahora
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon contact-info-icon--ig">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div>
+              <span class="contact-info-label">Instagram</span>
+              <a href="https://www.instagram.com/atechcp/" target="_blank" class="contact-info-value">
+                @atechcp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-response-badge mt-4">
+            <i class="bi bi-clock me-2"></i>
+            Respondemos en &lt; 24 horas
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-panel">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert-atech alert-atech--{{ message.tags }} mb-4" role="alert">
+                {% if message.tags == 'success' %}
+                  <i class="bi bi-check-circle-fill me-2"></i>
+                {% else %}
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                {% endif %}
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+
+          <form method="POST" action="#contacto" novalidate>
+            {% csrf_token %}
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group-atech">
+                  <label for="id_nombre" class="form-label-atech">
+                    <i class="bi bi-person me-1"></i> Nombre completo
+                  </label>
+                  {{ form.nombre }}
+                  {% if form.nombre.errors %}
+                    <div class="form-error">{{ form.nombre.errors|join:", " }}</div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-atech">
+                  <label for="id_email" class="form-label-atech">
+                    <i class="bi bi-envelope me-1"></i> Correo electrónico
+                  </label>
+                  {{ form.email }}
+                  {% if form.email.errors %}
+                    <div class="form-error">{{ form.email.errors|join:", " }}</div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-atech">
+                  <label for="id_asunto" class="form-label-atech">
+                    <i class="bi bi-tag me-1"></i> Asunto
+                  </label>
+                  {{ form.asunto }}
+                  {% if form.asunto.errors %}
+                    <div class="form-error">{{ form.asunto.errors|join:", " }}</div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-atech">
+                  <label for="id_mensaje" class="form-label-atech">
+                    <i class="bi bi-chat-text me-1"></i> Mensaje
+                  </label>
+                  {{ form.mensaje }}
+                  {% if form.mensaje.errors %}
+                    <div class="form-error">{{ form.mensaje.errors|join:", " }}</div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-primary-atech btn-submit w-100">
+                  <span class="btn-text">
+                    <i class="bi bi-send me-2"></i> Enviar mensaje
+                  </span>
+                  <span class="btn-loading d-none">
+                    <span class="spinner-border spinner-border-sm me-2"></span> Enviando…
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <img src="{% static 'atech/images/logo.png' %}" alt="ATech" height="48" class="footer-logo">
+            <span class="footer-brand-name ms-2">ATech</span>
+          </div>
+          <p class="footer-desc mt-3">
+            Transformamos ideas en software de alto impacto. Somos tu aliado tecnológico
+            para el crecimiento digital.
+          </p>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios"><i class="bi bi-chevron-right me-1"></i>Servicios</a></li>
+            <li><a href="#vision"><i class="bi bi-chevron-right me-1"></i>Visión</a></li>
+            <li><a href="#mision"><i class="bi bi-chevron-right me-1"></i>Misión</a></li>
+            <li><a href="#contacto"><i class="bi bi-chevron-right me-1"></i>Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Síguenos</h4>
+          <div class="social-links d-flex gap-3 mt-2">
+            <a href="https://www.instagram.com/atechcp/" target="_blank"
+               class="social-btn social-btn--instagram" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="{{ whatsapp_link }}" target="_blank"
+               class="social-btn social-btn--whatsapp" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+          <p class="footer-contact-email mt-4">
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:atechtrujillo@gmail.com">atechtrujillo@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2025 ATech. Todos los derechos reservados.</p>
+      <p class="mb-0">Hecho con <i class="bi bi-heart-fill text-danger mx-1"></i> en Colombia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'atech/js/main.js' %}"></script>
+</body>
+</html>
