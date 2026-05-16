@@ -15,9 +15,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-fallback-solo-desarrollo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web-production-c8ea.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-c8ea.up.railway.app']
 
 # Application definition
 INSTALLED_APPS = [
