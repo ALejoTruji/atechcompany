@@ -1,0 +1,1 @@
+web: gunicorn atech_project.wsgi --log-file -
